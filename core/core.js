@@ -1345,7 +1345,6 @@ var Map = require("collections/map");
 var parse = require("frb/parse");
 var evaluate = require("frb/evaluate");
 var assign = require("frb/assign");
-var observe = require("frb/observe");
 var bind = require("frb/bind");
 var compileObserver = require("frb/compile-observer");
 var Scope = require("frb/scope");
