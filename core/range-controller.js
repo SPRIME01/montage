@@ -33,11 +33,11 @@ var GenericCollection = require("collections/generic-collection");
 
 var EMPTY_ARRAY = Object.freeze([]);
 
-var RangeSelection = function(content, rangeController) {
-    var self = content.clone();
+var RangeSelection = function(rangeController) {
+    var self = [];
     self.makeObservable();
     self.rangeController = rangeController;
-    self.contentEquals = content && content.contentEquals || Object.is;
+    self.contentEquals = self.contentEquals || Object.is;
 
     Object.defineProperty(self, "clone", {
         value: function(){
@@ -168,7 +168,7 @@ var RangeController = exports.RangeController = Montage.specialize( /** @lends R
     constructor: {
         value: function RangeController(content) {
             this.content = null;
-            this._selection = new RangeSelection([], this);
+            this._selection = new RangeSelection(this);
 
             this.sortPath = null;
             this.filterPath = null;
