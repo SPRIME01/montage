@@ -1791,7 +1791,7 @@ var Repetition = exports.Repetition = Component.specialize(/** @lends Repetition
     _observeSelectionPointer: {
         value: function (pointerIdentifier) {
             this._selectionPointer = pointerIdentifier;
-
+            
             if (!this.eventManager.componentClaimingPointer(pointerIdentifier)) {
                 this.eventManager.claimPointer(pointerIdentifier, this);
             } //still listening on some events
@@ -1923,7 +1923,7 @@ var Repetition = exports.Repetition = Component.specialize(/** @lends Repetition
 
 
     handleTouchstart: {
-        value: function () {
+        value: function (event) {
             if (this._selectionPointer != null) {
                 // If we already have one touch making a selection, ignore any
                 // other pointers.
