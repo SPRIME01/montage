@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "collections": "git+ssh://git@github.com:montagejs/collections.git#a58ee3863cd3fee61e0331ac4af87130fe0db5f0",
-    "frb": "git+ssh://git@github.com:montagejs/frb.git#4ce382ebc84310e32e30e344873d310970c308c0",
+    "frb": "git+ssh://git@github.com:montagejs/frb.git",
     "mr": "~0.15.3",
     "mousse": "git+ssh://git@github.com:montagejs/mousse.git#910d22ca9993bebf76bd843b6a7b9aaa1d340fef",
     "htmlparser2": "~3.0.5",
